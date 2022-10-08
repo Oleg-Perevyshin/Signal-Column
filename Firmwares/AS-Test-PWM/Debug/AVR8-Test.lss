@@ -1,0 +1,740 @@
+
+AVR8-Test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000003ce  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000035a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800100  00800100  000003ce  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000003ce  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000400  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000060  00000000  00000000  00000440  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000dc7  00000000  00000000  000004a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000009ab  00000000  00000000  00001267  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000550  00000000  00000000  00001c12  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000158  00000000  00000000  00002164  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004ae  00000000  00000000  000022bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000004a2  00000000  00000000  0000276a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000050  00000000  00000000  00002c0c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	59 c0       	rjmp	.+178    	; 0xb4 <__ctors_end>
+   2:	00 00       	nop
+   4:	67 c0       	rjmp	.+206    	; 0xd4 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	65 c0       	rjmp	.+202    	; 0xd4 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	63 c0       	rjmp	.+198    	; 0xd4 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	61 c0       	rjmp	.+194    	; 0xd4 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	5f c0       	rjmp	.+190    	; 0xd4 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	5d c0       	rjmp	.+186    	; 0xd4 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	5b c0       	rjmp	.+182    	; 0xd4 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	59 c0       	rjmp	.+178    	; 0xd4 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	57 c0       	rjmp	.+174    	; 0xd4 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	55 c0       	rjmp	.+170    	; 0xd4 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	53 c0       	rjmp	.+166    	; 0xd4 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	51 c0       	rjmp	.+162    	; 0xd4 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	4f c0       	rjmp	.+158    	; 0xd4 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	4d c0       	rjmp	.+154    	; 0xd4 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	4b c0       	rjmp	.+150    	; 0xd4 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	4a c0       	rjmp	.+148    	; 0xd6 <__vector_16>
+  42:	00 00       	nop
+  44:	47 c0       	rjmp	.+142    	; 0xd4 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	45 c0       	rjmp	.+138    	; 0xd4 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	43 c0       	rjmp	.+134    	; 0xd4 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	41 c0       	rjmp	.+130    	; 0xd4 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	3f c0       	rjmp	.+126    	; 0xd4 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	3d c0       	rjmp	.+122    	; 0xd4 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	3b c0       	rjmp	.+118    	; 0xd4 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	39 c0       	rjmp	.+114    	; 0xd4 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	37 c0       	rjmp	.+110    	; 0xd4 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	35 c0       	rjmp	.+106    	; 0xd4 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	33 c0       	rjmp	.+102    	; 0xd4 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	31 c0       	rjmp	.+98     	; 0xd4 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	2f c0       	rjmp	.+94     	; 0xd4 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	2d c0       	rjmp	.+90     	; 0xd4 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	2b c0       	rjmp	.+86     	; 0xd4 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	29 c0       	rjmp	.+82     	; 0xd4 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	27 c0       	rjmp	.+78     	; 0xd4 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	25 c0       	rjmp	.+74     	; 0xd4 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	23 c0       	rjmp	.+70     	; 0xd4 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	21 c0       	rjmp	.+66     	; 0xd4 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	1f c0       	rjmp	.+62     	; 0xd4 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	1d c0       	rjmp	.+58     	; 0xd4 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	1b c0       	rjmp	.+54     	; 0xd4 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	19 c0       	rjmp	.+50     	; 0xd4 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	17 c0       	rjmp	.+46     	; 0xd4 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	15 c0       	rjmp	.+42     	; 0xd4 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	13 c0       	rjmp	.+38     	; 0xd4 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	11 c0       	rjmp	.+34     	; 0xd4 <__bad_interrupt>
+	...
+
+000000b4 <__ctors_end>:
+  b4:	11 24       	eor	r1, r1
+  b6:	1f be       	out	0x3f, r1	; 63
+  b8:	cf ef       	ldi	r28, 0xFF	; 255
+  ba:	d8 e0       	ldi	r29, 0x08	; 8
+  bc:	de bf       	out	0x3e, r29	; 62
+  be:	cd bf       	out	0x3d, r28	; 61
+
+000000c0 <__do_clear_bss>:
+  c0:	21 e0       	ldi	r18, 0x01	; 1
+  c2:	a0 e0       	ldi	r26, 0x00	; 0
+  c4:	b1 e0       	ldi	r27, 0x01	; 1
+  c6:	01 c0       	rjmp	.+2      	; 0xca <.do_clear_bss_start>
+
+000000c8 <.do_clear_bss_loop>:
+  c8:	1d 92       	st	X+, r1
+
+000000ca <.do_clear_bss_start>:
+  ca:	a4 30       	cpi	r26, 0x04	; 4
+  cc:	b2 07       	cpc	r27, r18
+  ce:	e1 f7       	brne	.-8      	; 0xc8 <.do_clear_bss_loop>
+  d0:	28 d1       	rcall	.+592    	; 0x322 <main>
+  d2:	41 c1       	rjmp	.+642    	; 0x356 <_exit>
+
+000000d4 <__bad_interrupt>:
+  d4:	95 cf       	rjmp	.-214    	; 0x0 <__vectors>
+
+000000d6 <__vector_16>:
+#define GREEN PORTD5
+#define BLUE PORTD7
+
+// Прерывание по переполнению Т0
+ISR(TIMER0_OVF_vect)
+{
+  d6:	1f 92       	push	r1
+  d8:	0f 92       	push	r0
+  da:	0f b6       	in	r0, 0x3f	; 63
+  dc:	0f 92       	push	r0
+  de:	11 24       	eor	r1, r1
+  e0:	8f 93       	push	r24
+  e2:	9f 93       	push	r25
+	static unsigned char pwm_counter;
+	
+	// Если яркостm больше значения счетчика - включаем вывод, иначе выключен
+	if(pwm_counter < pwm_r) PORTD |= (1 << RED);
+  e4:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <pwm_r>
+  e8:	90 91 00 01 	lds	r25, 0x0100	; 0x800100 <_edata>
+  ec:	98 17       	cp	r25, r24
+  ee:	10 f4       	brcc	.+4      	; 0xf4 <__vector_16+0x1e>
+  f0:	5e 9a       	sbi	0x0b, 6	; 11
+  f2:	01 c0       	rjmp	.+2      	; 0xf6 <__vector_16+0x20>
+	else PORTD &= ~(1 << RED);
+  f4:	5e 98       	cbi	0x0b, 6	; 11
+	if(pwm_counter < pwm_g) PORTD |= (1 << GREEN);
+  f6:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <pwm_g>
+  fa:	90 91 00 01 	lds	r25, 0x0100	; 0x800100 <_edata>
+  fe:	98 17       	cp	r25, r24
+ 100:	10 f4       	brcc	.+4      	; 0x106 <__vector_16+0x30>
+ 102:	5d 9a       	sbi	0x0b, 5	; 11
+ 104:	01 c0       	rjmp	.+2      	; 0x108 <__vector_16+0x32>
+	else PORTD &= ~(1 << GREEN);
+ 106:	5d 98       	cbi	0x0b, 5	; 11
+	if(pwm_counter < pwm_b) PORTD |= (1 << BLUE);
+ 108:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <pwm_b>
+ 10c:	90 91 00 01 	lds	r25, 0x0100	; 0x800100 <_edata>
+ 110:	98 17       	cp	r25, r24
+ 112:	10 f4       	brcc	.+4      	; 0x118 <__vector_16+0x42>
+ 114:	5f 9a       	sbi	0x0b, 7	; 11
+ 116:	01 c0       	rjmp	.+2      	; 0x11a <__vector_16+0x44>
+	else PORTD &= ~(1 << BLUE);
+ 118:	5f 98       	cbi	0x0b, 7	; 11
+	
+	pwm_counter++;	// Инкрементируем счетчик
+ 11a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+ 11e:	8f 5f       	subi	r24, 0xFF	; 255
+ 120:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+}
+ 124:	9f 91       	pop	r25
+ 126:	8f 91       	pop	r24
+ 128:	0f 90       	pop	r0
+ 12a:	0f be       	out	0x3f, r0	; 63
+ 12c:	0f 90       	pop	r0
+ 12e:	1f 90       	pop	r1
+ 130:	18 95       	reti
+
+00000132 <delay_us>:
+
+// Процедура задержки в микросекундах
+void delay_us(unsigned char time_us)
+{
+	register unsigned char i;
+	for(i = 0; i < time_us; i++)   // 4 цикла
+ 132:	88 23       	and	r24, r24
+ 134:	31 f0       	breq	.+12     	; 0x142 <delay_us+0x10>
+ 136:	90 e0       	ldi	r25, 0x00	; 0
+	{
+		asm (" PUSH  R0 ");       // 2 цикла
+ 138:	0f 92       	push	r0
+		asm (" POP   R0 ");       // 2 цикла
+ 13a:	0f 90       	pop	r0
+
+// Процедура задержки в микросекундах
+void delay_us(unsigned char time_us)
+{
+	register unsigned char i;
+	for(i = 0; i < time_us; i++)   // 4 цикла
+ 13c:	9f 5f       	subi	r25, 0xFF	; 255
+ 13e:	89 13       	cpse	r24, r25
+ 140:	fb cf       	rjmp	.-10     	; 0x138 <delay_us+0x6>
+ 142:	08 95       	ret
+
+00000144 <delay_ms>:
+		asm (" POP   R0 ");       // 2 цикла
+	}
+}
+// Процедура задержки в миллисекундах
+void delay_ms(unsigned int time_ms)
+{ register unsigned int i;
+ 144:	0f 93       	push	r16
+ 146:	1f 93       	push	r17
+ 148:	cf 93       	push	r28
+ 14a:	df 93       	push	r29
+	for(i = 0; i < time_ms; i++)
+ 14c:	00 97       	sbiw	r24, 0x00	; 0
+ 14e:	b9 f0       	breq	.+46     	; 0x17e <delay_ms+0x3a>
+ 150:	8c 01       	movw	r16, r24
+ 152:	c0 e0       	ldi	r28, 0x00	; 0
+ 154:	d0 e0       	ldi	r29, 0x00	; 0
+	{
+ 		delay_us(250); delay_us(250); delay_us(250); delay_us(250);
+ 156:	8a ef       	ldi	r24, 0xFA	; 250
+ 158:	ec df       	rcall	.-40     	; 0x132 <delay_us>
+ 15a:	8a ef       	ldi	r24, 0xFA	; 250
+ 15c:	ea df       	rcall	.-44     	; 0x132 <delay_us>
+ 15e:	8a ef       	ldi	r24, 0xFA	; 250
+ 160:	e8 df       	rcall	.-48     	; 0x132 <delay_us>
+ 162:	8a ef       	ldi	r24, 0xFA	; 250
+ 164:	e6 df       	rcall	.-52     	; 0x132 <delay_us>
+ 		delay_us(250); delay_us(250); delay_us(250); delay_us(250);
+ 166:	8a ef       	ldi	r24, 0xFA	; 250
+ 168:	e4 df       	rcall	.-56     	; 0x132 <delay_us>
+ 16a:	8a ef       	ldi	r24, 0xFA	; 250
+ 16c:	e2 df       	rcall	.-60     	; 0x132 <delay_us>
+ 16e:	8a ef       	ldi	r24, 0xFA	; 250
+ 170:	e0 df       	rcall	.-64     	; 0x132 <delay_us>
+ 172:	8a ef       	ldi	r24, 0xFA	; 250
+ 174:	de df       	rcall	.-68     	; 0x132 <delay_us>
+ 176:	21 96       	adiw	r28, 0x01	; 1
+ 178:	0c 17       	cp	r16, r28
+	}
+}
+// Процедура задержки в миллисекундах
+void delay_ms(unsigned int time_ms)
+{ register unsigned int i;
+	for(i = 0; i < time_ms; i++)
+ 17a:	1d 07       	cpc	r17, r29
+ 17c:	61 f7       	brne	.-40     	; 0x156 <delay_ms+0x12>
+ 17e:	df 91       	pop	r29
+ 180:	cf 91       	pop	r28
+	{
+ 		delay_us(250); delay_us(250); delay_us(250); delay_us(250);
+ 		delay_us(250); delay_us(250); delay_us(250); delay_us(250);
+	}
+}
+ 182:	1f 91       	pop	r17
+ 184:	0f 91       	pop	r16
+ 186:	08 95       	ret
+
+00000188 <red>:
+ 188:	ff 92       	push	r15
+ 18a:	0f 93       	push	r16
+
+// Красный цвет
+void red (unsigned char time)
+{
+ 18c:	1f 93       	push	r17
+ 18e:	cf 93       	push	r28
+ 190:	df 93       	push	r29
+	for(unsigned char a = 0; a < 255; a++)
+ 192:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		pwm_r = a; pwm_g = 0; pwm_b = 0;
+		delay_ms(time);
+ 194:	08 2f       	mov	r16, r24
+ 196:	10 e0       	ldi	r17, 0x00	; 0
+// Красный цвет
+void red (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = a; pwm_g = 0; pwm_b = 0;
+ 198:	c0 93 01 01 	sts	0x0101, r28	; 0x800101 <pwm_r>
+ 19c:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <pwm_g>
+ 1a0:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 1a4:	d0 2f       	mov	r29, r16
+ 1a6:	f1 2e       	mov	r15, r17
+ 1a8:	c8 01       	movw	r24, r16
+ 1aa:	cc df       	rcall	.-104    	; 0x144 <delay_ms>
+}
+
+// Красный цвет
+void red (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+ 1ac:	cf 5f       	subi	r28, 0xFF	; 255
+ 1ae:	cf 3f       	cpi	r28, 0xFF	; 255
+ 1b0:	99 f7       	brne	.-26     	; 0x198 <red+0x10>
+		pwm_r = a; pwm_g = 0; pwm_b = 0;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+	{
+		pwm_r = a; pwm_g = 0; pwm_b = 0;
+ 1b2:	c0 93 01 01 	sts	0x0101, r28	; 0x800101 <pwm_r>
+ 1b6:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <pwm_g>
+ 1ba:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 1be:	8d 2f       	mov	r24, r29
+ 1c0:	9f 2d       	mov	r25, r15
+ 1c2:	c0 df       	rcall	.-128    	; 0x144 <delay_ms>
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = a; pwm_g = 0; pwm_b = 0;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+ 1c4:	c1 50       	subi	r28, 0x01	; 1
+ 1c6:	a9 f7       	brne	.-22     	; 0x1b2 <red+0x2a>
+	{
+		pwm_r = a; pwm_g = 0; pwm_b = 0;
+		delay_ms(time);
+	}
+}
+ 1c8:	df 91       	pop	r29
+ 1ca:	cf 91       	pop	r28
+ 1cc:	1f 91       	pop	r17
+ 1ce:	0f 91       	pop	r16
+ 1d0:	ff 90       	pop	r15
+ 1d2:	08 95       	ret
+
+000001d4 <green>:
+
+// Зеленый цвет
+void green (unsigned char time)
+{
+ 1d4:	ff 92       	push	r15
+ 1d6:	0f 93       	push	r16
+ 1d8:	1f 93       	push	r17
+ 1da:	cf 93       	push	r28
+ 1dc:	df 93       	push	r29
+	for(unsigned char a = 0; a < 255; a++)
+ 1de:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		pwm_r = 0; pwm_g = a; pwm_b = 0;
+		delay_ms(time);
+ 1e0:	08 2f       	mov	r16, r24
+ 1e2:	10 e0       	ldi	r17, 0x00	; 0
+// Зеленый цвет
+void green (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = 0; pwm_g = a; pwm_b = 0;
+ 1e4:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <pwm_r>
+ 1e8:	c0 93 02 01 	sts	0x0102, r28	; 0x800102 <pwm_g>
+ 1ec:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 1f0:	d0 2f       	mov	r29, r16
+ 1f2:	f1 2e       	mov	r15, r17
+ 1f4:	c8 01       	movw	r24, r16
+ 1f6:	a6 df       	rcall	.-180    	; 0x144 <delay_ms>
+}
+
+// Зеленый цвет
+void green (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+ 1f8:	cf 5f       	subi	r28, 0xFF	; 255
+ 1fa:	cf 3f       	cpi	r28, 0xFF	; 255
+ 1fc:	99 f7       	brne	.-26     	; 0x1e4 <green+0x10>
+		pwm_r = 0; pwm_g = a; pwm_b = 0;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+	{
+		pwm_r = 0; pwm_g = a; pwm_b = 0;
+ 1fe:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <pwm_r>
+ 202:	c0 93 02 01 	sts	0x0102, r28	; 0x800102 <pwm_g>
+ 206:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 20a:	8d 2f       	mov	r24, r29
+ 20c:	9f 2d       	mov	r25, r15
+ 20e:	9a df       	rcall	.-204    	; 0x144 <delay_ms>
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = 0; pwm_g = a; pwm_b = 0;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+ 210:	c1 50       	subi	r28, 0x01	; 1
+ 212:	a9 f7       	brne	.-22     	; 0x1fe <green+0x2a>
+	{
+		pwm_r = 0; pwm_g = a; pwm_b = 0;
+		delay_ms(time);
+	}
+}
+ 214:	df 91       	pop	r29
+ 216:	cf 91       	pop	r28
+ 218:	1f 91       	pop	r17
+ 21a:	0f 91       	pop	r16
+ 21c:	ff 90       	pop	r15
+ 21e:	08 95       	ret
+
+00000220 <blue>:
+
+// Синий цвет
+void blue (unsigned char time)
+{
+ 220:	ff 92       	push	r15
+ 222:	0f 93       	push	r16
+ 224:	1f 93       	push	r17
+ 226:	cf 93       	push	r28
+ 228:	df 93       	push	r29
+	for(unsigned char a = 0; a < 255; a++)
+ 22a:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		pwm_r = 0; pwm_g = 0; pwm_b = a;
+		delay_ms(time);
+ 22c:	08 2f       	mov	r16, r24
+ 22e:	10 e0       	ldi	r17, 0x00	; 0
+// Синий цвет
+void blue (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = 0; pwm_g = 0; pwm_b = a;
+ 230:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <pwm_r>
+ 234:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <pwm_g>
+ 238:	c0 93 03 01 	sts	0x0103, r28	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 23c:	d0 2f       	mov	r29, r16
+ 23e:	f1 2e       	mov	r15, r17
+ 240:	c8 01       	movw	r24, r16
+ 242:	80 df       	rcall	.-256    	; 0x144 <delay_ms>
+}
+
+// Синий цвет
+void blue (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+ 244:	cf 5f       	subi	r28, 0xFF	; 255
+ 246:	cf 3f       	cpi	r28, 0xFF	; 255
+ 248:	99 f7       	brne	.-26     	; 0x230 <blue+0x10>
+		pwm_r = 0; pwm_g = 0; pwm_b = a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+	{
+		pwm_r = 0; pwm_g = 0; pwm_b = a;
+ 24a:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <pwm_r>
+ 24e:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <pwm_g>
+ 252:	c0 93 03 01 	sts	0x0103, r28	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 256:	8d 2f       	mov	r24, r29
+ 258:	9f 2d       	mov	r25, r15
+ 25a:	74 df       	rcall	.-280    	; 0x144 <delay_ms>
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = 0; pwm_g = 0; pwm_b = a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+ 25c:	c1 50       	subi	r28, 0x01	; 1
+ 25e:	a9 f7       	brne	.-22     	; 0x24a <blue+0x2a>
+	{
+		pwm_r = 0; pwm_g = 0; pwm_b = a;
+		delay_ms(time);
+	}
+}
+ 260:	df 91       	pop	r29
+ 262:	cf 91       	pop	r28
+ 264:	1f 91       	pop	r17
+ 266:	0f 91       	pop	r16
+ 268:	ff 90       	pop	r15
+ 26a:	08 95       	ret
+
+0000026c <white>:
+
+// Белый цвет
+void white (unsigned char time)
+{
+ 26c:	ff 92       	push	r15
+ 26e:	0f 93       	push	r16
+ 270:	1f 93       	push	r17
+ 272:	cf 93       	push	r28
+ 274:	df 93       	push	r29
+	for(unsigned char a = 0; a < 255; a++)
+ 276:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		pwm_r = a; pwm_g = a; pwm_b = a;
+		delay_ms(time);
+ 278:	08 2f       	mov	r16, r24
+ 27a:	10 e0       	ldi	r17, 0x00	; 0
+// Белый цвет
+void white (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = a; pwm_g = a; pwm_b = a;
+ 27c:	c0 93 01 01 	sts	0x0101, r28	; 0x800101 <pwm_r>
+ 280:	c0 93 02 01 	sts	0x0102, r28	; 0x800102 <pwm_g>
+ 284:	c0 93 03 01 	sts	0x0103, r28	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 288:	d0 2f       	mov	r29, r16
+ 28a:	f1 2e       	mov	r15, r17
+ 28c:	c8 01       	movw	r24, r16
+ 28e:	5a df       	rcall	.-332    	; 0x144 <delay_ms>
+}
+
+// Белый цвет
+void white (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+ 290:	cf 5f       	subi	r28, 0xFF	; 255
+ 292:	cf 3f       	cpi	r28, 0xFF	; 255
+ 294:	99 f7       	brne	.-26     	; 0x27c <white+0x10>
+		pwm_r = a; pwm_g = a; pwm_b = a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+	{
+		pwm_r = a; pwm_g = a; pwm_b = a;
+ 296:	c0 93 01 01 	sts	0x0101, r28	; 0x800101 <pwm_r>
+ 29a:	c0 93 02 01 	sts	0x0102, r28	; 0x800102 <pwm_g>
+ 29e:	c0 93 03 01 	sts	0x0103, r28	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 2a2:	8d 2f       	mov	r24, r29
+ 2a4:	9f 2d       	mov	r25, r15
+ 2a6:	4e df       	rcall	.-356    	; 0x144 <delay_ms>
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = a; pwm_g = a; pwm_b = a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 255; a > 0; a--)
+ 2a8:	c1 50       	subi	r28, 0x01	; 1
+ 2aa:	a9 f7       	brne	.-22     	; 0x296 <white+0x2a>
+	{
+		pwm_r = a; pwm_g = a; pwm_b = a;
+		delay_ms(time);
+	}
+}
+ 2ac:	df 91       	pop	r29
+ 2ae:	cf 91       	pop	r28
+ 2b0:	1f 91       	pop	r17
+ 2b2:	0f 91       	pop	r16
+ 2b4:	ff 90       	pop	r15
+ 2b6:	08 95       	ret
+
+000002b8 <rgb>:
+
+// Переход цветов
+void rgb (unsigned char time)
+{
+ 2b8:	ff 92       	push	r15
+ 2ba:	0f 93       	push	r16
+ 2bc:	1f 93       	push	r17
+ 2be:	cf 93       	push	r28
+ 2c0:	df 93       	push	r29
+	for(unsigned char a = 0; a < 255; a++)
+ 2c2:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		pwm_r = a; pwm_g = 255 - a;
+		delay_ms(time);
+ 2c4:	08 2f       	mov	r16, r24
+ 2c6:	10 e0       	ldi	r17, 0x00	; 0
+// Переход цветов
+void rgb (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = a; pwm_g = 255 - a;
+ 2c8:	c0 93 01 01 	sts	0x0101, r28	; 0x800101 <pwm_r>
+ 2cc:	8c 2f       	mov	r24, r28
+ 2ce:	80 95       	com	r24
+ 2d0:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <pwm_g>
+		delay_ms(time);
+ 2d4:	d0 2f       	mov	r29, r16
+ 2d6:	f1 2e       	mov	r15, r17
+ 2d8:	c8 01       	movw	r24, r16
+ 2da:	34 df       	rcall	.-408    	; 0x144 <delay_ms>
+}
+
+// Переход цветов
+void rgb (unsigned char time)
+{
+	for(unsigned char a = 0; a < 255; a++)
+ 2dc:	cf 5f       	subi	r28, 0xFF	; 255
+ 2de:	cf 3f       	cpi	r28, 0xFF	; 255
+ 2e0:	99 f7       	brne	.-26     	; 0x2c8 <rgb+0x10>
+ 2e2:	c0 e0       	ldi	r28, 0x00	; 0
+		pwm_r = a; pwm_g = 255 - a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_b = a; pwm_r = 255 - a;
+ 2e4:	c0 93 03 01 	sts	0x0103, r28	; 0x800103 <pwm_b>
+ 2e8:	8c 2f       	mov	r24, r28
+ 2ea:	80 95       	com	r24
+ 2ec:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <pwm_r>
+		delay_ms(time);
+ 2f0:	8d 2f       	mov	r24, r29
+ 2f2:	9f 2d       	mov	r25, r15
+ 2f4:	27 df       	rcall	.-434    	; 0x144 <delay_ms>
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_r = a; pwm_g = 255 - a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 0; a < 255; a++)
+ 2f6:	cf 5f       	subi	r28, 0xFF	; 255
+ 2f8:	cf 3f       	cpi	r28, 0xFF	; 255
+ 2fa:	a1 f7       	brne	.-24     	; 0x2e4 <rgb+0x2c>
+ 2fc:	c0 e0       	ldi	r28, 0x00	; 0
+		pwm_b = a; pwm_r = 255 - a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_g = a; pwm_b = 255 - a;
+ 2fe:	c0 93 02 01 	sts	0x0102, r28	; 0x800102 <pwm_g>
+ 302:	8c 2f       	mov	r24, r28
+ 304:	80 95       	com	r24
+ 306:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <pwm_b>
+		delay_ms(time);
+ 30a:	8d 2f       	mov	r24, r29
+ 30c:	9f 2d       	mov	r25, r15
+ 30e:	1a df       	rcall	.-460    	; 0x144 <delay_ms>
+	for(unsigned char a = 0; a < 255; a++)
+	{
+		pwm_b = a; pwm_r = 255 - a;
+		delay_ms(time);
+	}
+	for(unsigned char a = 0; a < 255; a++)
+ 310:	cf 5f       	subi	r28, 0xFF	; 255
+ 312:	cf 3f       	cpi	r28, 0xFF	; 255
+ 314:	a1 f7       	brne	.-24     	; 0x2fe <rgb+0x46>
+	{
+		pwm_g = a; pwm_b = 255 - a;
+		delay_ms(time);
+	}
+}
+ 316:	df 91       	pop	r29
+ 318:	cf 91       	pop	r28
+ 31a:	1f 91       	pop	r17
+ 31c:	0f 91       	pop	r16
+ 31e:	ff 90       	pop	r15
+ 320:	08 95       	ret
+
+00000322 <main>:
+
+int main (void)
+{
+	DDRD = 0b11100000;
+ 322:	80 ee       	ldi	r24, 0xE0	; 224
+ 324:	8a b9       	out	0x0a, r24	; 10
+	PORTD = 0x00;
+ 326:	1b b8       	out	0x0b, r1	; 11
+	TCCR0A |= (0<<COM0A1)|(0<<COM0A0)|(0<<COM0B1)|(0<<COM0B0)|(0<<WGM01)|(1<<WGM00);
+ 328:	84 b5       	in	r24, 0x24	; 36
+ 32a:	81 60       	ori	r24, 0x01	; 1
+ 32c:	84 bd       	out	0x24, r24	; 36
+	TCCR0B |= (0<<FOC0A)|(0<<FOC0B)|(0<<WGM02)|(0<<CS02)|(0<<CS01)|(1<<CS00);
+ 32e:	85 b5       	in	r24, 0x25	; 37
+ 330:	81 60       	ori	r24, 0x01	; 1
+ 332:	85 bd       	out	0x25, r24	; 37
+	TIMSK0 |= (1 << TOIE0);		// Разрешаем прерывание по переполнению Т0
+ 334:	ee e6       	ldi	r30, 0x6E	; 110
+ 336:	f0 e0       	ldi	r31, 0x00	; 0
+ 338:	80 81       	ld	r24, Z
+ 33a:	81 60       	ori	r24, 0x01	; 1
+ 33c:	80 83       	st	Z, r24
+	
+	sei(); // Разрешаем прерывания Глобально
+ 33e:	78 94       	sei
+	
+	while(1)
+	{
+		red(8);
+ 340:	88 e0       	ldi	r24, 0x08	; 8
+ 342:	22 df       	rcall	.-444    	; 0x188 <red>
+ 		green(8);
+ 344:	88 e0       	ldi	r24, 0x08	; 8
+ 346:	46 df       	rcall	.-372    	; 0x1d4 <green>
+		blue(8);
+ 348:	88 e0       	ldi	r24, 0x08	; 8
+ 34a:	6a df       	rcall	.-300    	; 0x220 <blue>
+		white(8);
+ 34c:	88 e0       	ldi	r24, 0x08	; 8
+ 34e:	8e df       	rcall	.-228    	; 0x26c <white>
+		for(;;)
+		{
+			rgb(16);
+ 350:	80 e1       	ldi	r24, 0x10	; 16
+ 352:	b2 df       	rcall	.-156    	; 0x2b8 <rgb>
+ 354:	fd cf       	rjmp	.-6      	; 0x350 <main+0x2e>
+
+00000356 <_exit>:
+ 356:	f8 94       	cli
+
+00000358 <__stop_program>:
+ 358:	ff cf       	rjmp	.-2      	; 0x358 <__stop_program>
